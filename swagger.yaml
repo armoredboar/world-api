@@ -1,0 +1,133 @@
+swagger: '2.0'
+info:
+  description: Worlds management API. This API provides funcionalities to overview and manage worlds rules of the game.
+  version: 1.0.0
+  title: World API
+  # put the contact info for your development or API team
+  contact:
+    email: eduardojonssen@gmail.com
+
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0.html
+
+# tags are used for organizing operations
+tags:
+- name: admin
+  description: Secured Admin-only calls
+- name: frontend
+  description: Operations available to regular integration
+
+paths:
+  /worlds:
+    get:
+      tags:
+      - frontend
+      summary: lists all the available worlds
+      operationId: getWorlds
+      description: |
+        Information about the existing worlds and their creation date.
+      produces:
+      - application/json
+      parameters:
+      - in: query
+        name: includeAll
+        description: specifies whether the disabled/closed worlds should be returned
+        required: false
+        default: false
+        type: boolean
+      responses:
+        200:
+          description: search results of available worlds
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/World'
+        400:
+          description: bad input parameter
+    post:
+      tags:
+      - admin
+      summary: adds a new world to the game
+      operationId: addWorld
+      description: |
+        Adds a world to the game. The world infrastucture must exist,
+        so the players do not try to access an invalid world.
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      parameters:
+      - in: body
+        name: world
+        description: Information about the world to add
+        schema:
+          $ref: '#/definitions/World'
+      responses:
+        201:
+          description: world created
+        400:
+          description: invalid input, object invalid
+        409:
+          description: the specified world already exists
+  /worlds/{worldId}:
+    delete:
+      tags:
+      - admin
+      summary: closes a world after the end of the game
+      operationId: closeWorld
+      description: |
+        Removes the world of the game. Worlds removed cannot be
+        joined or accessed by anyone.
+      produces:
+      - application/json
+      parameters:
+      - in: path
+        name: worldId
+        description: id of the world to be removed
+        required: true
+        type: integer
+        format: int32
+      responses:
+        200:
+          description: world is removed
+        400:
+          description: invalid Id supplied
+        404:
+          description: world not found
+definitions:
+  World:
+    type: object
+    required:
+    - name
+    - speed
+    - status
+    - gameServer
+    properties:
+      id:
+        type: integer
+        format: int32
+        example: 12
+      name:
+        type: string
+        example: Brazil 1
+      creationDate:
+        type: string
+        format: date
+        example: "2018-08-29"
+      speed:
+        type: string
+        example: 1x
+      status:
+        type: string
+        example: active
+      gameServer:
+        type: string
+        format: url
+        example: https://br1.game.com
+# Added by API Auto Mocking Plugin
+host: virtserver.swaggerhub.com
+basePath: /game/world/1.0.0
+schemes:
+ - https
+ - http
