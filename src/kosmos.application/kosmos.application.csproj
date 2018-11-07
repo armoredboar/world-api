@@ -18,6 +18,7 @@
 
     <ItemGroup>
       <ProjectReference Include="..\kosmos.domain\kosmos.domain.csproj" />
+      <ProjectReference Include="..\kosmos.persistence\kosmos.persistence.csproj" />
     </ItemGroup>
 
     <ItemGroup>

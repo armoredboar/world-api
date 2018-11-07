@@ -4411,6 +4411,7 @@
         "dependencies": {
           "FluentValidation": "8.0.100",
           "Kosmos.Domain": "1.0.0",
+          "Kosmos.Persistence": "1.0.0",
           "MediatR": "5.1.0"
         },
         "compile": {
@@ -4428,6 +4429,16 @@
         },
         "runtime": {
           "bin/placeholder/Kosmos.Domain.dll": {}
+        }
+      },
+      "Kosmos.Persistence/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.1",
+        "compile": {
+          "bin/placeholder/Kosmos.Persistence.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Kosmos.Persistence.dll": {}
         }
       }
     }
@@ -11773,6 +11784,11 @@
       "type": "project",
       "path": "../kosmos.domain/kosmos.domain.csproj",
       "msbuildProject": "../kosmos.domain/kosmos.domain.csproj"
+    },
+    "Kosmos.Persistence/1.0.0": {
+      "type": "project",
+      "path": "../kosmos.persistence/kosmos.persistence.csproj",
+      "msbuildProject": "../kosmos.persistence/kosmos.persistence.csproj"
     }
   },
   "projectFileDependencyGroups": {

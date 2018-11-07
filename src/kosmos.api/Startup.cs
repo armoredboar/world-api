@@ -2,6 +2,8 @@
 using kosmos.api.Filters;
 using Kosmos.Application.Infrastructure;
 using Kosmos.Application.world.commands;
+using Kosmos.Persistence.Interfaces;
+using Kosmos.Persistence.Repository;
 using MediatR;
 using MediatR.Pipeline;
 using Microsoft.AspNetCore.Builder;
@@ -25,6 +27,8 @@ namespace kosmos.api
             services.AddTransient(typeof(IPipelineBehavior<,>), typeof(RequestPreProcessorBehavior<,>));
             services.AddTransient(typeof(IPipelineBehavior<,>), typeof(RequestValidationBehavior<,>));
             services.AddMediatR(typeof(CreateWorldCommandHandler).Assembly);
+
+            services.AddTransient<IWorldRepository, WorldRepository>();
             
             services.Configure<ApiBehaviorOptions>(options =>
             {

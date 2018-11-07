@@ -2,29 +2,28 @@ using System.Threading;
 using System.Threading.Tasks;
 using Kosmos.Application.Infrastructure;
 using Kosmos.Domain.entities;
+using Kosmos.Persistence.Interfaces;
 using MediatR;
 
 namespace Kosmos.Application.world.commands
 {
     public sealed class CreateWorldCommandHandler : IRequestHandler<CreateWorldCommand, Result>
     {
-        public CreateWorldCommandHandler()
+        private readonly IWorldRepository _worldRepository;
+        
+        public CreateWorldCommandHandler(IWorldRepository worldRepository)
         {
-            
+            this._worldRepository = worldRepository;
         }
         
-        public Task<Result> Handle(CreateWorldCommand request, CancellationToken cancellationToken)
+        public async Task<Result> Handle(CreateWorldCommand request, CancellationToken cancellationToken)
         {
-            World world = new World
-            {
-                Name = request.Name,
-                GameServer = request.GameServer
-            };
+            int worldId = await this._worldRepository.SaveAsync(request.Name, request.GameServer);
 
-            //todo: persist data
+            var data = new {worlId = worldId};
             
-            Result baseResult = new Result { Success = true };
-            return Task.FromResult(baseResult);
+            Result result = new Result { Success = true, Data = data};
+            return  result;
         }
     }
 }

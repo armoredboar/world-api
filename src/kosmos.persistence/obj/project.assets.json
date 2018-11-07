@@ -681,23 +681,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\damia\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "/home/anansi/.nuget/packages/": {},
+    "/usr/share/dotnet/sdk/NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\damia\\Documents\\Projects\\armored-boar\\world-api\\src\\kosmos.persistence\\kosmos.persistence.csproj",
+      "projectUniqueName": "/mnt/c/Users/damia/Documents/Projects/armored-boar/world-api/src/kosmos.persistence/kosmos.persistence.csproj",
       "projectName": "Kosmos.Persistence",
-      "projectPath": "C:\\Users\\damia\\Documents\\Projects\\armored-boar\\world-api\\src\\kosmos.persistence\\kosmos.persistence.csproj",
-      "packagesPath": "C:\\Users\\damia\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\damia\\Documents\\Projects\\armored-boar\\world-api\\src\\kosmos.persistence\\obj\\",
+      "projectPath": "/mnt/c/Users/damia/Documents/Projects/armored-boar/world-api/src/kosmos.persistence/kosmos.persistence.csproj",
+      "packagesPath": "/home/anansi/.nuget/packages/",
+      "outputPath": "/mnt/c/Users/damia/Documents/Projects/armored-boar/world-api/src/kosmos.persistence/obj/",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        "/usr/share/dotnet/sdk/NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\damia\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "/home/anansi/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.1"
