@@ -14,7 +14,11 @@
     ],
     "frameworks": {
       "netcoreapp2.1": {
-        "projectReferences": {}
+        "projectReferences": {
+          "C:\\Users\\damia\\Documents\\Projects\\armored-boar\\world-api\\src\\kosmos.domain\\kosmos.domain.csproj": {
+            "projectPath": "C:\\Users\\damia\\Documents\\Projects\\armored-boar\\world-api\\src\\kosmos.domain\\kosmos.domain.csproj"
+          }
+        }
       }
     },
     "warningProperties": {
@@ -26,6 +30,14 @@
   "frameworks": {
     "netcoreapp2.1": {
       "dependencies": {
+        "FluentValidation": {
+          "target": "Package",
+          "version": "[8.0.100, )"
+        },
+        "MediatR": {
+          "target": "Package",
+          "version": "[5.1.0, )"
+        },
         "Microsoft.NETCore.App": {
           "suppressParent": "All",
           "target": "Package",

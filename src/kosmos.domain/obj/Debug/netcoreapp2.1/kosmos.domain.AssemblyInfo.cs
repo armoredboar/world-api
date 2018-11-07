@@ -7,10 +7,10 @@
 using System;
 using System.Reflection;
 
-[assembly: System.Reflection.AssemblyCompanyAttribute("kosmos.domain")]
+[assembly: System.Reflection.AssemblyCompanyAttribute("Kosmos.Domain")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
-[assembly: System.Reflection.AssemblyProductAttribute("kosmos.domain")]
-[assembly: System.Reflection.AssemblyTitleAttribute("kosmos.domain")]
+[assembly: System.Reflection.AssemblyProductAttribute("Kosmos.Domain")]
+[assembly: System.Reflection.AssemblyTitleAttribute("Kosmos.Domain")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

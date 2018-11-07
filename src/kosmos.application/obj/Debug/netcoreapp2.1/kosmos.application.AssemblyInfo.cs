@@ -7,10 +7,10 @@
 using System;
 using System.Reflection;
 
-[assembly: System.Reflection.AssemblyCompanyAttribute("kosmos.application")]
+[assembly: System.Reflection.AssemblyCompanyAttribute("Kosmos.Application")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
-[assembly: System.Reflection.AssemblyProductAttribute("kosmos.application")]
-[assembly: System.Reflection.AssemblyTitleAttribute("kosmos.application")]
+[assembly: System.Reflection.AssemblyProductAttribute("Kosmos.Application")]
+[assembly: System.Reflection.AssemblyTitleAttribute("Kosmos.Application")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
